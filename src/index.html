@@ -8,21 +8,29 @@
     <title>Document</title>
     <link rel="stylesheet" href="dist/styles.css">
 </head>
-<body>
-    <main>
-        <div class="wrapperForm">
+<body class="body">
+    <main class="main">
+        <div class="main__wrapperForm">
             <form class="form">
-                <label for="name">Name</label>
-                <input type="text" id="name" />
+                <div class="form__item">
+                    <label for="name" class="form__label">Name</label>
+                    <input type="text" id="name" class="form__input"/>
+                </div>
 
-                <label for="email">E-mail</label>
-                <input type="email" id="email" />
+                <div class="form__item">
+                    <label for="email" class="form__label">E-mail</label>
+                    <input type="email" id="email" class="form__input" />
+                </div>
 
-                <label for="telephone">Telephone number</label>
-                <input type="text" id="telephone" />
+                <div class="form__item">
+                    <label for="telephone" class="form__label">Telephone number</label>
+                    <input type="text" id="telephone" class="form__input"/>
+                </div>
 
-                <label for="text">Message</label>
-                <textarea id="text"></textarea>
+                <div class="form__item">
+                    <label for="text" class="form__label">Message</label>
+                    <textarea id="text" class="form__inputs"></textarea>
+                </div>
             </form>
         </div>
     </main>
