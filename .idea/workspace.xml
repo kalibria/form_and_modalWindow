@@ -2,9 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28f667b8-9ddc-40e8-ac86-5909cd65046a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/scripts/telMask.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +45,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709129228329</updated>
       <workItem from="1709129229449" duration="59000" />
-      <workItem from="1709129329409" duration="10817000" />
+      <workItem from="1709129329409" duration="14433000" />
     </task>
     <servers />
   </component>
