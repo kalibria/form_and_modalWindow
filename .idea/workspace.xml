@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="28f667b8-9ddc-40e8-ac86-5909cd65046a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/scripts/createErrorMessage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/scripts/deleteErrorMessage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/emailValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/emailValidation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scripts/formValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/formValidation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scripts/nameValidation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/scripts/nameValidation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1709129228329</updated>
       <workItem from="1709129229449" duration="59000" />
-      <workItem from="1709129329409" duration="25895000" />
+      <workItem from="1709129329409" duration="26605000" />
     </task>
     <servers />
   </component>
