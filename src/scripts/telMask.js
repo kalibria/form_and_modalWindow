@@ -9,7 +9,4 @@ const mask = IMask(telInput, maskOptions);
 
 mask.on('complete', () => console.log(mask.value));
 
-const buttonSubmit = document.getElementById('btnSubmit');
-buttonSubmit.onsubmit = function (){
-  mask.destroy()
-}
+

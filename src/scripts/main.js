@@ -1,5 +1,6 @@
 import '../styles/styles.scss';
-import './telMask'
+import './telMask';
+import './validation';
 
 
 
