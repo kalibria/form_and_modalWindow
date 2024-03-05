@@ -1,9 +1,11 @@
 const webpack = require('webpack')
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 
 module.exports = {
+
   mode: 'development', // or 'production'
   entry: './src/scripts/main.js', // Entry point of your application
   output: {
@@ -40,5 +42,6 @@ module.exports = {
   plugins: [
     new webpack.ProgressPlugin(),
     new HtmlWebpackPlugin({ template: './src/index.html' }),
+    new NodePolyfillPlugin()
   ],
 };

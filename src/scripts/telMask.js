@@ -3,10 +3,11 @@ import IMask from 'imask';
 
 const telInput = document.getElementById('tel');
 const maskOptions = {
-  mask: '+{375}(00)000-00-00'
+  mask: '+{375}(00)000-00-00',
+  lazy: false
 };
-const mask = IMask(telInput, maskOptions);
+export const mask = IMask(telInput, maskOptions);
 
-mask.on('complete', () => console.log(mask.value));
+
 
 
