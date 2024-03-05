@@ -12,7 +12,7 @@ const inputTel = document.getElementById('tel');
 const inputMessage = document.getElementById('message');
 const buttonSubmit = document.getElementById('btnSubmit');
 
-let valuesForm = {
+export let valuesForm = {
   name:'',
   email:'',
   tel:'',
