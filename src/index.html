@@ -10,31 +10,36 @@
 </head>
 <body class="body">
     <main class="main">
-        <div class="main__wrapperForm">
-            <form class="form">
-                <div class="form__item">
-                    <label for="name" class="form__label">Name</label>
-                    <input type="text" id="name" name="name" value="" required class="form__input"/>
-                </div>
+        <div class="main__wrapper">
+            <button type="submit" class="main__buttonOpen button">Open</button>
 
-                <div class="form__item">
-                    <label for="email" class="form__label">E-mail</label>
-                    <input type="email" id="email" name="email" value="" required class="form__input" />
-                </div>
+            <div class="main__wrapperForm">
+                <form class="form">
+                    <div class="form__item">
+                        <label for="name" class="form__label">Name</label>
+                        <input type="text" id="name" name="name" value="" required class="form__input"/>
+                    </div>
 
-                <div class="form__item">
-                    <label for="tel" class="form__label">Telephone number</label>
-                    <input type="text" id="tel" name="tel" value="" required class="form__input"/>
-                </div>
+                    <div class="form__item">
+                        <label for="email" class="form__label">E-mail</label>
+                        <input type="email" id="email" name="email" value="" required class="form__input" />
+                    </div>
 
-                <div class="form__item">
-                    <label for="message" class="form__label">Message</label>
-                    <textarea id="message" required class="form__inputs"></textarea>
-                </div>
+                    <div class="form__item">
+                        <label for="tel" class="form__label">Telephone number</label>
+                        <input type="text" id="tel" name="tel" value="" required class="form__input"/>
+                    </div>
 
-                <input type="button" value="Send" id="btnSubmit" />
-            </form>
+                    <div class="form__item">
+                        <label for="message" class="form__label">Message</label>
+                        <textarea id="message" required class="form__inputs"></textarea>
+                    </div>
+
+                    <input type="button" value="Send" id="btnSubmit" class="form__buttonSend button"/>
+                </form>
+            </div>
         </div>
+
     </main>
     <script src="dist/bundle.js"></script>
 </body>
