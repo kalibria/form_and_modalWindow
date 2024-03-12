@@ -12,30 +12,46 @@
 
 }
 
+.modalWindow:target {
+  opacity: 1;
+  visibility: visible;
+}
+
 .modalWindow {
-  width:500px;
-  height: 250px;
-  border:solid 1px dodgerblue;
-  border-radius: 5px;
-  margin: 20% auto;
-  padding: 20px;
-  background-color: lightcyan;
-  display: flex;
-  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left: 0;
+  background-color: #afa9a9a3;
+  opacity: 0;
+  visibility: hidden;
+
+
+
+  &__body {
+    width:500px;
+    height: 250px;
+    border:solid 1px dodgerblue;
+    border-radius: 5px;
+    margin: 20% auto;
+    padding: 20px;
+    background-color: lightcyan;
+    display: flex;
+    flex-direction: column;
+  }
 
   &__closeButton {
     align-self: center;
-  }
-}
+    a {
+      text-decoration: none;
+      color: #111;
 
-.wrapperWindow {
-  height: 100vh;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  z-index: 10;
+      &:hover {
+        color: #acccea;
+      }
+    }
+  }
 }
 
 
@@ -71,6 +87,15 @@
 
     &__buttonOpen {
       margin-bottom: 10vh;
+      a {
+        text-decoration: none;
+        color: #111;
+
+        &:hover {
+          color: #acccea;
+        }
+      }
+
   }
 
 }
