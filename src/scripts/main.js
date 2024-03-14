@@ -1,6 +1,6 @@
 import '../styles/styles.scss';
 import './telMask';
-import './formValidation';
+import './changeInputs';
 // import './openModalWindow';
 import '@fortawesome/fontawesome-free/css/all.css';
 // import './closeModalWindow'

@@ -1,4 +1,4 @@
-import {valuesForm} from './formValidation';
+import {FormValues} from './valuesInLS';
 
 
 export const submitValidation =async (formValues) =>{
@@ -16,5 +16,16 @@ export const submitValidation =async (formValues) =>{
    }
   }else {
     alert("Please fill a form");
+  }
+}
+
+
+export const submitValidation2 = async () => {
+  const valuesForSubmit = {
+    name: FormValues.getValue('name'),
+    email: FormValues.getValue('email'),
+    tel: FormValues.getValue('tel'),
+    message: FormValues.getValue('message')
+
   }
 }
