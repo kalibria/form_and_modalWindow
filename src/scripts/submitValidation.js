@@ -1,31 +1,6 @@
-import {FormValues} from './valuesInLS';
-
-
-export const submitValidation =async (formValues) =>{
-  if(formValues.name !== "" && formValues.email !== "" && formValues.tel !== "" && formValues.message !== ""){
-    let response = await fetch('http://localhost:9090/api/registration', {
-      method: 'POST',
-      body: JSON.stringify(valuesForm)
-    });
-    if( response.ok){
-     let json = await response.json();
-     alert(json.message);
-     window.location.reload()
-   }else {
-     alert('Error HTTP' + response.status)
-   }
-  }else {
-    alert("Please fill a form");
-  }
+export const submitValidation = (value) =>  {
+    return typeof value ==='string';
 }
 
 
-export const submitValidation2 = async () => {
-  const valuesForSubmit = {
-    name: FormValues.getValue('name'),
-    email: FormValues.getValue('email'),
-    tel: FormValues.getValue('tel'),
-    message: FormValues.getValue('message')
 
-  }
-}

@@ -1,12 +1,12 @@
-import {submitValidation} from './submitValidation';
+import {submitForm} from './submitForm';
 import {fieldsValidation} from './fieldsValidation';
 
 
-const inputName = document.getElementById('name');
-const inputEmail = document.getElementById('email');
-const inputTel = document.getElementById('tel');
-const inputMessage = document.getElementById('message');
-const buttonSubmit = document.getElementById('btnSubmit');
+export const inputName = document.getElementById('name');
+export const inputEmail = document.getElementById('email');
+export const inputTel = document.getElementById('tel');
+export const inputMessage = document.getElementById('message');
+export const buttonSubmit = document.getElementById('btnSubmit');
 
 
 inputName.onchange = () => {
@@ -26,6 +26,6 @@ inputMessage.onchange = () =>{
   fieldsValidation.fieldMessageValidation(inputMessage)
 }
 
-buttonSubmit.onclick = () => submitValidation(valuesForm)
+buttonSubmit.onclick = () => submitForm()
 
 

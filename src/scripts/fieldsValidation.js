@@ -1,62 +1,75 @@
-import {FormValues} from './valuesInLS';
+import {formValues} from './valuesInLS';
 import {deleteErrorMessage} from './deleteErrorMessage';
 import {createErrorMessage} from './createErrorMessage';
 import {formInputsValidation} from './inputsValidation';
 import {mask} from './telMask';
+import {inputTel} from './changeInputs';
 
 class FieldsValidation {
-  fieldNameValidation = (inputName) => {
-    if(formInputsValidation.nameValidation(inputName.value)){
-      FormValues.setValue('name', inputName.value)
-      deleteErrorMessage('errorName', inputName)
-    }else {
-      if(!document.getElementById('errorName')){
+  fieldNameValidation = (name) => {
+    if (formInputsValidation.nameValidation(name.value)) {
+      formValues.setValue('name', name.value)
+      deleteErrorMessage('errorName', name)
+      return true
+    } else {
+      if (!document.getElementById('errorName')) {
         const errorName = createErrorMessage('Invalid name', 'errorName');
-        inputName.after(errorName);
-        inputName.className = 'errorInput';
+        name.after(errorName);
+        name.className = 'errorInput';
+        return false
       }
     }
   }
 
-  fieldEmailValidation = (inputEmail) => {
-    if(formInputsValidation.emailValidation(inputEmail.value)){
-      FormValues.setValue('email', inputEmail.value)
-      deleteErrorMessage('errorEmail', inputEmail)
-    }else {
-      if(!document.getElementById('errorEmail')){
+  fieldEmailValidation = (email) => {
+
+    if (formInputsValidation.emailValidation(email.value)) {
+      formValues.setValue('email', email.value)
+      deleteErrorMessage('errorEmail', email)
+      return true
+    } else {
+      if (!document.getElementById('errorEmail')) {
         const errorEmail = createErrorMessage('Invalid email', 'errorEmail');
-        inputEmail.after(errorEmail);
-        inputEmail.className = 'errorInput';
+        email.after(errorEmail);
+        email.className = 'errorInput';
+        return false
       }
     }
   }
 
-  fieldTelValidation = (inputTel) => {
-    if(!formInputsValidation.telValidation()){
-      if(!document.getElementById('errorTel')){
-        const errorTel = createErrorMessage('Invalid telephone number','errorTel');
+
+  fieldTelValidation = (tel) => {
+    console.log("tel", tel);
+
+    if (!formInputsValidation.telValidation()) {
+      if (!document.getElementById('errorTel')) {
+        const errorTel = createErrorMessage('Invalid telephone number', 'errorTel');
         inputTel.after(errorTel);
         inputTel.className = 'errorInput';
+        return false
       }
-    }else {
-      FormValues.setValue('tel',mask.value )
+    } else {
+      formValues.setValue('tel', mask.value)
       deleteErrorMessage('errorTel', inputTel)
+      return true
     }
   }
 
-  fieldMessageValidation = (inputMessage) => {
-    if(!formInputsValidation.messageValidation(inputMessage.value)){
-      FormValues.setValue('message', inputMessage.value)
-    }else {
-      if(document.getElementById('errorMessage')){
+  fieldMessageValidation = (message) => {
+
+    if (formInputsValidation.messageValidation(message.value)) {
+      formValues.setValue('message', message.value)
+      return true
+    } else {
+      if (document.getElementById('errorMessage')) {
         const errorMessage = createErrorMessage('Invalid message', 'errorMessage');
-        inputMessage.after(errorMessage);
-        inputMessage.className = 'errorInput';
+        message.after(errorMessage);
+        message.className = 'errorInput';
+        return false
       }
     }
   }
-
-
 }
+
 
 export const fieldsValidation = new FieldsValidation()

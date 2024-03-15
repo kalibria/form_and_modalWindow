@@ -5,8 +5,11 @@ class ValuesInLS {
   getValue = (id) => {
     return localStorage.getItem(id)
   }
+  clear = () => {
+    localStorage.clear()
+  }
 }
 
 
-export const FormValues = new ValuesInLS();
+export const formValues = new ValuesInLS();
 
