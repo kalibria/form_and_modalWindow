@@ -9,7 +9,11 @@ class FieldsValidation {
   fieldNameValidation = (name) => {
     if (formInputsValidation.nameValidation(name.value)) {
       formValues.setValue('name', name.value)
-      deleteErrorMessage('errorName', name)
+      deleteErrorMessage('errorName', name);
+
+      if(document.getElementById('errorname')){
+        deleteErrorMessage('errorname', name)
+      }
       return true
     } else {
       if (!document.getElementById('errorName')) {
@@ -26,6 +30,10 @@ class FieldsValidation {
     if (formInputsValidation.emailValidation(email.value)) {
       formValues.setValue('email', email.value)
       deleteErrorMessage('errorEmail', email)
+
+      if(document.getElementById('erroremail')){
+        deleteErrorMessage('erroremail', email)
+      }
       return true
     } else {
       if (!document.getElementById('errorEmail')) {
@@ -39,7 +47,6 @@ class FieldsValidation {
 
 
   fieldTelValidation = (tel) => {
-    console.log("tel", tel);
 
     if (!formInputsValidation.telValidation()) {
       if (!document.getElementById('errorTel')) {
@@ -51,6 +58,10 @@ class FieldsValidation {
     } else {
       formValues.setValue('tel', mask.value)
       deleteErrorMessage('errorTel', inputTel)
+
+      if(document.getElementById('errortel')){
+        deleteErrorMessage('errortel', tel)
+      }
       return true
     }
   }
@@ -59,9 +70,14 @@ class FieldsValidation {
 
     if (formInputsValidation.messageValidation(message.value)) {
       formValues.setValue('message', message.value)
+      deleteErrorMessage('errorMessage', message)
+
+      if(document.getElementById('errormessage')){
+        deleteErrorMessage('errormessage', message)
+      }
       return true
     } else {
-      if (document.getElementById('errorMessage')) {
+      if (!document.getElementById('errorMessage')) {
         const errorMessage = createErrorMessage('Invalid message', 'errorMessage');
         message.after(errorMessage);
         message.className = 'errorInput';

@@ -1,28 +1,18 @@
 import {formValues} from './valuesInLS';
-import {fieldsValidation} from './fieldsValidation';
 import {setDefaultInputValues} from './setDefaultInputValues';
-import {submitValidation} from './submitValidation';
+import {createErrorMessage} from './createErrorMessage';
+import { filledValues} from './filledValues';
 
 
 export const submitForm = async () => {
 
-  const valuesForSubmit = {
-    name: formValues.getValue('name'),
-    email: formValues.getValue('email'),
-    tel: formValues.getValue('tel'),
-    message: formValues.getValue('message')
-  }
-
-  const fieldsIsFill = {
-    name: submitValidation(valuesForSubmit.name),
-    email:  submitValidation(valuesForSubmit.email),
-    tel: submitValidation(valuesForSubmit.tel),
-    message: submitValidation(valuesForSubmit.message)
-  }
+  const valuesForSubmit = filledValues.createObjWithAllValuesForSubmit();
+  const fieldsIsFill = filledValues.createObjWithInfoIsFieldsIsFill();
 
   const isTrue = Object.values(fieldsIsFill).every(value => value === true)
 
     if(isTrue){
+
       let response = await fetch('http://localhost:9090/api/registration', {
         method: 'POST',
         body: JSON.stringify(valuesForSubmit)
@@ -37,7 +27,24 @@ export const submitForm = async () => {
         alert('Error HTTP' + response.status)
       }
     }else {
-      alert("Fill the form")
-    }
 
+      alert("Fill the form");
+      const map = new Map(Object.entries(fieldsIsFill));
+      map.forEach((value, key) => {
+        if (value === false) {
+          console.log("value", value)
+          const blankField = document.getElementById(key);
+          const errorEl = createErrorMessage('Fill in the field', `error${key}`);
+          blankField.after(errorEl);
+          blankField.className = 'errorInput';
+        }
+      });
+      const unfilledInputs = Object.fromEntries(map.entries())
+
+    }
 }
+
+
+// export const submitForm = () => {
+//   alert("submit")
+// }
