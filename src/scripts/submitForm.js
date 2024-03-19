@@ -45,6 +45,3 @@ export const submitForm = async () => {
 }
 
 
-// export const submitForm = () => {
-//   alert("submit")
-// }
