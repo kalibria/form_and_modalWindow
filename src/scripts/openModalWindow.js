@@ -1,12 +1,21 @@
-import {addOpenStyle, removeOpenStyle} from './openRemoveOpenStyle'
-
 const openButton = document.getElementById('openButton');
-export const modalWindow = document.getElementById('modelWindow');
+
 
 
 openButton.onclick = (event) => {
+  const modalWindow = document.getElementById('modelWindow');
   event.preventDefault();
-  addOpenStyle(modalWindow);
+  modalWindow.classList.add("open");
+
+  const closeButton = document.getElementById('closeButton');
+  modalWindow.onclick = (event) => {
+    console.log(event.target.id)
+    if(event.target.id !== "modalWindowBody" || event.target.id === "closeButton"){
+      modalWindow.classList.remove('open');
+    }
+  }
+
+
 }
 
 

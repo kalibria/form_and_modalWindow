@@ -1,7 +1,9 @@
 import {disableScrolling, enableScrolling} from './disableEnableScrolling';
 
 export const addOpenStyle = (element) => {
-  element.style.display = 'block';
+  console.log("open")
+  // element.style.display = 'block';
+  // element.className('open')
   disableScrolling();
 }
 

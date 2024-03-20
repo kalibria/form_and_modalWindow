@@ -12,9 +12,9 @@
 
 }
 
-.modalWindow:target {
+.modalWindow .open .modalWindow__body {
+transform: translate(0px, 0px);
   opacity: 1;
-  visibility: visible;
 }
 
 .modalWindow {
@@ -29,14 +29,6 @@
   overflow-y: auto;
   overflow-x: hidden;
   transition: all 0.8s ease 0s;
-
-  &__area {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top:0;
-    left: 0;
-  }
 
 
   &__body {
@@ -62,6 +54,11 @@
         color: #acccea;
       }
     }
+  }
+
+  &.open {
+    opacity: 1;
+    visibility: visible;
   }
 }
 
