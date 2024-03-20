@@ -7,6 +7,7 @@ class InputsValidation {
   }
   emailValidation = (email) =>{
     const regEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    console.log('regexp', regEmail.test(email))
     return regEmail.test(email)
   }
   telValidation = () => {

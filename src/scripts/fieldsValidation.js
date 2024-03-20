@@ -26,7 +26,6 @@ class FieldsValidation {
   }
 
   fieldEmailValidation = (email) => {
-
     if (formInputsValidation.emailValidation(email.value)) {
       formValues.setValue('email', email.value)
       deleteErrorMessage('errorEmail', email)

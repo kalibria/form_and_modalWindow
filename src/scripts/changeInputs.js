@@ -13,7 +13,7 @@ inputName.onchange = () => {
   fieldsValidation.fieldNameValidation(inputName)
 };
 
-inputEmail.onchange = () => {
+inputEmail.oninput = () => {
   fieldsValidation.fieldEmailValidation(inputEmail)
 }
 

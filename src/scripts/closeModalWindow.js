@@ -1,8 +1,12 @@
 import {removeOpenStyle} from './openRemoveOpenStyle';
-import {modalWindow} from './openModalWindow';
 
 
 const closeButton = document.getElementById('closeButton');
 closeButton.onclick = () =>{
   removeOpenStyle(modalWindow)
+}
+
+export const modalWindow = document.getElementById('modalWindow');
+modalWindow.onclick = (event) =>{
+  console.log("closeTarget", event.target)
 }
