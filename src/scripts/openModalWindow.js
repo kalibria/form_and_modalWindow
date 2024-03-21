@@ -1,7 +1,6 @@
 const openButton = document.getElementById('openButton');
 
 
-
 openButton.onclick = (event) => {
   const modalWindow = document.getElementById('modelWindow');
   event.preventDefault();
